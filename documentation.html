@@ -1,0 +1,140 @@
+<!--... Build a Technical Documentation Page
+
+Objective: Build an app that is functionally similar to https://technical-documentation-page.freecodecamp.rocks
+
+User Stories:
+
+    You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
+    Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five
+    The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
+    Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
+    The .main-section elements should contain at least ten p elements total (not each)
+    The .main-section elements should contain at least five code elements total (not each)
+    The .main-section elements should contain at least five li items total (not each)
+    You can see a nav element with a corresponding id="navbar"
+    The navbar element should contain one header element which contains text that describes the topic of the technical documentation
+    Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section
+    The header element in the #navbar must come before any link (a) elements in the navbar
+    Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")
+    When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)
+    On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
+    Your technical documentation should use at least one media query
+
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
+""""-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Python Documentation</title>
+    </head>
+    <body>
+        <h2>Python Documentation</h2>
+        <main id="main-doc">
+            <section id="main-section" id="intro">
+                <header>Python Introduction</header>
+                <article>
+                    <h3>What is Python</h3>
+                    <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+                    <p>It is used for:</p>
+                    <ul>
+                        <li>web development (server-side),</li>
+                        <li>software development,</li>
+                        <li>mathematics,</li>
+                        <li>system scripting.</li>
+                    </ul>
+                    <h3>What can Python do?</h3>
+                    <ul>
+                        <li>
+                            Python can be used on a server to create web applications
+                        </li>
+                        <li>Python can be used alongside software to create workflows.
+                            </li>
+                        <li>Python can connect to database systems. It can also read and modify files.
+                            </li>
+                        <li>Python can be used to handle big data and perform complex mathematics.
+                            </li>
+                        <li>Python can be used for rapid prototyping, or for production-ready software development</li>
+                    </ul>
+                    <h3>Why Python?</h3>
+                    <ul>
+                        <li>
+                            Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).
+                           
+                        </li>
+                        <li> Python has a simple syntax similar to the English language.
+                            </li>
+                        <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
+                            </li>
+                        <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+                            </li>
+                        <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
+                    </ul>
+
+                </article>
+            </section>
+            <section id="main-section" id="getting_started">
+                <header><h2>Python Getting Started
+                </h2>
+                </header>
+                <article>
+                    <h3>Python Install</h3>
+                    <p>Many PCs and Macs will have python already installed.</p><br>
+                       <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
+                       <code id="command_line">C:\Users\Your Name>python --version </code>
+                       <p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
+                       <code id="command_line">python --version</code>
+                       <p>If you find that you do not have Python installed on your computer, then you can download it for free from the following website: <a href="https://www.python.org"></a>/</p></br>
+                    <h3>Python Quickstart</h3>
+                    <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.
+
+                        The way to run a python file is like this on the command line:</p>
+                        <code id="command_line">C:\Users\Your Name>python helloworld.py </code>
+                        <p>Where "helloworld.py" is the name of your python file.
+
+                            Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
+                            <code id="code_example">helloworld.py
+                                print("Hello, World!")</code>
+                                <p>Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:</p>
+                                <p id="command_line">C:\Users\Your Name>python helloworld.py </p>
+                                <p>The output should read:</p>
+                                <p id="command_line">Hello, World! </p>
+                                <p>Congratulations, you have written and executed your first Python program.</p>
+                </article>
+            </section>
+            <section id="main-section" id="python_varaible">
+                <header><h2>Python Variables</h2>
+                </header>
+                <article>
+                    <p>Python Variable is containers that store values. Python is not “statically typed”. We do not need to declare variables before using them or declare their type.
+                     A variable is created the moment we first assign a value to it. A Python variable is a name given to a memory location. It is the basic unit of storage in a program.</p>
+                        <h3>Example of Variable in Python</h3>
+                        <p>An Example of a Variable in Python is a representational name that serves as a pointer to an object. Once an object is assigned to a variable, it can be referred to by that name. In layman’s terms, we can say that Variable in Python is containers that store values.
+
+                            Here we have stored “Geeksforgeeks”  in a var which is variable, and when we call its name the stored information will get printed.</p>
+                        <code id="code_example">Var = "Geeksforgeeks"
+                            print(Var)</code>
+                            <bold>Output:</bold>
+                            <p id="command_line">Geeksforgeeks</p>
+                            <p>Rules for Python variables</p>
+                            <ul>
+                                <li>A Python variable name must start with a letter or the underscore character.</li>
+                                <li>A Python variable name cannot start with a number.</li>
+                                <li>A Python variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).
+                                    </li>
+                                    <li>Variable in Python names are case-sensitive (name, Name, and NAME are three different variables).
+                                        </li>
+                                        <li>The reserved words(keywords) in Python cannot be used to name the variable in Python.</li>
+                            </ul>
+                        </article>
+            </section>
+            <section id="main-section"></section>
+            <section id="main-section"></section>
+            <section id="main-section"></section>
+        </main>
+    </body>
+</html>
